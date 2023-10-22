@@ -11,10 +11,11 @@ layout: default
     let messages = "";
 
     function handleRequest() {
+        const currentPath = window.location.pathname;
         const urlParams = new URLSearchParams(window.location.search);
         const message = urlParams.get('s');
 
-        if (message) {
+        if (currentPath.endsWith("/add-message") && message) {
             messageCount++;
             if (messages.length > 0) {
                 messages += "<br>";
