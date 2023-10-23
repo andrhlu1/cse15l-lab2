@@ -7,8 +7,13 @@ layout: default
 <div id="output"></div>
 
 <script>
-    let messageCount = 0;
-    let messages = "";
+    // Load previous messages from localStorage
+    let messages = JSON.parse(localStorage.getItem("messages") || "[]");
+
+    function displayMessages() {
+        const displayText = messages.map((message, index) => `${index + 1}. ${message}`).join("<br>");
+        document.getElementById('output').innerHTML = displayText;
+    }
 
     function handleRequest() {
         const currentPath = window.location.pathname;
@@ -16,12 +21,12 @@ layout: default
         const message = urlParams.get('s');
 
         if (currentPath.endsWith("/add-message") && message) {
-            messageCount++;
-            if (messages.length > 0) {
-                messages += "<br>";
-            }
-            messages += messageCount + ". " + message;
-            document.getElementById('output').innerHTML = messages;
+            messages.push(message);
+            // Save updated messages to localStorage
+            localStorage.setItem("messages", JSON.stringify(messages));
+            displayMessages();
+        } else {
+            displayMessages();
         }
     }
 
