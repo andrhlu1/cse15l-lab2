@@ -17,7 +17,7 @@ layout: default
 
     function handleRequest() {
         const currentHash = window.location.hash.substring(1); // Remove the '#' at the start
-        const urlParams = new URLSearchParams(currentHash.split("?")[1]);
+        const urlParams = new URLSearchParams(url.search);
         const message = urlParams.get('s');
 
         if (currentHash.startsWith("add-message") && message) {
