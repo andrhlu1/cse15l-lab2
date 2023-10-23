@@ -11,7 +11,7 @@ class StringHandler implements URLHandler {
             String[] parameters = url.getQuery().split("=");
             if (parameters[0].equals("s")) {
                 count++;
-                message = ( message + "\n" + count + "." + parameters[1]));
+                message = ( message + "\n" + count + "." + parameters[1]);
                 return message;
             }
             return "404 Not Found!";
