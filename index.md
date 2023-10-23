@@ -20,7 +20,7 @@ layout: default
         const urlParams = new URLSearchParams(window.location.search);
         const message = urlParams.get('s');
 
-        if (currentHash.endsWith("add-message") && message) {
+        if (currentPath.endsWith("/add-message") && message) {
             messages.push(message);
             // Save updated messages to localStorage
             localStorage.setItem("messages", JSON.stringify(messages));
