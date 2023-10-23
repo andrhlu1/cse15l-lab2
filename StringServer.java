@@ -14,8 +14,8 @@ class StringHandler implements URLHandler {
                 message = ( message + "\n" + count + "." + parameters[1]);
                 return message;
             }
-            return "404 Not Found!";
         }
+        return "404 Not Found!";
     }
 }
 
