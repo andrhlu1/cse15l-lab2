@@ -1,3 +1,4 @@
+#Part 1:
 StringServer.java code:
 
 import java.io.IOException;
