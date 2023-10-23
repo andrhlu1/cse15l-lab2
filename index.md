@@ -16,8 +16,8 @@ layout: default
     }
 
     function handleRequest() {
-        const currentHash = window.location.hash.substring(1); // Remove the '#' at the start
-        const urlParams = new URLSearchParams(url.search);
+        const currentPath = window.location.pathname;
+        const urlParams = new URLSearchParams(window.location.search);
         const message = urlParams.get('s');
 
         if (currentHash.startsWith("add-message") && message) {
