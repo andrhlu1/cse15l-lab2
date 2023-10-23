@@ -16,11 +16,11 @@ layout: default
     }
 
     function handleRequest() {
-        const currentPath = window.location.pathname;
-        const urlParams = new URLSearchParams(window.location.search);
+        const currentHash = window.location.hash.substring(1); // Remove the '#' at the start
+        const urlParams = new URLSearchParams(currentHash.split("?")[1]);
         const message = urlParams.get('s');
 
-        if (currentPath.endsWith("/add-message") && message) {
+        if (currentHash.startsWith("add-message") && message) {
             messages.push(message);
             // Save updated messages to localStorage
             localStorage.setItem("messages", JSON.stringify(messages));
