@@ -15,7 +15,7 @@ layout: default
         const urlParams = new URLSearchParams(window.location.search);
         const message = urlParams.get('s');
 
-        if (currentPath.endsWith("/add-message?s=") && message) {
+        if (currentPath.endsWith("/add-message") && message) {
             messageCount++;
             if (messages.length > 0) {
                 messages += "<br>";
