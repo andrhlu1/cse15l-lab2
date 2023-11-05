@@ -36,7 +36,7 @@ public class StringServer {
     }
 }
 
-![Image](Lab2sc2.jpg)
+![Image](lab2sc2.jpg)
 
 ![Image](Lab2sc.jpg)
 
