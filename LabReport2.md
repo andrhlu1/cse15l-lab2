@@ -41,6 +41,10 @@ public class StringServer {
 ![Image](Lab2sc.jpg)
 
 part2:
+![Image](lab2sc3.jpg)
+
+![Image](lab2sc4.jpg)
+
 
 
 part3:
