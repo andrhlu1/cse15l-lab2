@@ -45,7 +45,7 @@ part2:
 
 ![Image](lab2sc4.jpg)
 
-
+![Image](lab2sc5.jpg)
 
 part3:
 One big thing I learned from lab from week 2 was building and running a server. I learned how to use commands such as /increment and /add within the URL to create interesting effects on the webpage.I also learned how to run the server on a remote computer using ieng6.
